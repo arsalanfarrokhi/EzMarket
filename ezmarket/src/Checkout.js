@@ -4,12 +4,13 @@ import Subtotal from './Subtotal'
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider'
 function Checkout() {
-  const [{basket}, _] = useStateValue();
+  const [{basket, user}, _] = useStateValue();
   return (
    <div className="checkout">
         <div className="checkout__left">
             <img src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" className="checkout__ad" />
             <div>
+                <h3>Hello, {user? user.email : "Guest"}</h3>
                 <h2 className='checkout__title'>Your Shopping Basket</h2>
                 
                 {basket.map(item =>(
