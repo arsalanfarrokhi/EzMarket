@@ -17,7 +17,7 @@ function Header() {
       <Link to='/'>
       <img
         className='header__logo' 
-        src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' 
+        src={require('./ezMarket.png')}//'http://pngimg.com/uploads/amazon/amazon_PNG11.png' 
         alt='Logo'/>   
       </Link>    
       <div 
@@ -26,10 +26,10 @@ function Header() {
         <SearchIcon className='header__searchIcon'/>
       </div>
         <div className="header__nav">
-        <Link to={!user && "./login"}>
+        <Link to={!user && "/login"}>
           <div className="header__option" onClick={handleAuthentication}>
             <span className='header__optionLineOne'>
-              Hello {}
+              Hello, {user?user.email:"Guest"}
             </span>
             <span className='header__optionLineTwo'>{user?"Sign Out" : "Sign in" }</span>
           </div>
