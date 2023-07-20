@@ -1,12 +1,16 @@
-import React from 'react'
-import "./Home.css"
-import Product from './Product'
+import React from "react";
+import "./Home.css";
+import Product from "./Product";
 
 function Home() {
   return (
-    <div className='home'>
-        <div className="home__container">
-            <img className="home__image" src="https://m.media-amazon.com/images/I/719Izgkn1dL._SX3000_.jpg" alt="Banner"/>
+    <div className="home">
+      <div className="home__container">
+        <img
+          className="home__image"
+          src="https://m.media-amazon.com/images/I/719Izgkn1dL._SX3000_.jpg"
+          alt="Banner"
+        />
         <div className="home__row">
           <Product
             id="12321341"
@@ -56,10 +60,10 @@ function Home() {
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
           />
-        </div> 
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
